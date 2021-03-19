@@ -21,7 +21,7 @@ server.bind(address)
 
 # This function intercepts the incoming connections from the clients
 def accept_incoming_connections():
-    """Sets up handling for incoming clients."""
+    """Sets up handling for incoming clients"""
     while True:
         client, client_address = server.accept()
         print("%s:%s has connected." % client_address)
@@ -87,10 +87,10 @@ def get_all_message_for_dest(destination):
 # And stores the message in the txt file. For example,
 # UserA/UserB/message.txt
 def store_message_in_db(source, destination, message):
-    ''' store the message in the database '''
+    '' store the message in the database ''
     return
 
-# Function to broadcast a message to everyone
+# Function to broadcast a message to everyne
 def broadcast(msg, source=""):
     for sock in clients:
         sock.send(bytes(source + " : " + msg, "utf8"))
